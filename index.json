@@ -11,38 +11,31 @@
       "cover": "covers/steam_1636440.jpg",
       "offsets_url": null,
       "cheats": {
-        "health_sub": {
+        "health": {
           "type": "float",
           "aob_pattern": "F3 0F 11 4F ?? F3 0F 10",
           "patch": "nop",
+          "nop_len": 5,
+          "value": 100.0,
+          "freeze": true,
           "enabled": true,
-          "Freeze": true,
-          "note": "تعطيل نقصان الصحة (Unreal subss)"
+          "note": "FearLess CE: movss [rdi+off],xmm — يوقف كتابة الصحة (NOP) ويُعلَّق عند 100"
         },
-        "health_sub_1": {
-          "type": "int32",
+        "health_sub": {
+          "type": "float",
           "aob_pattern": "F3 0F 5C ?? ?? ?? ?? ?? 0F 2F",
           "patch": "nop",
           "enabled": true,
-          "freeze": false,
-          "note": "بديل 1 لنقصان الصحة"
-        },
-        "health_sub_2": {
-          "type": "int32",
-          "aob_pattern": "F3 0F 5C ?? ?? ?? ?? ?? 0F 2F",
-          "patch": "nop",
-          "enabled": true,
-          "freeze": false,
-          "note": "تعطيل نقصان الصحة 2"
+          "freeze": true,
+          "note": "بديل: تعطيل خصم الصحة (subss/comiss)"
         },
         "health_store": {
           "type": "float",
           "aob_pattern": "F3 0F 11 ?? ?? ?? ?? ?? F3 0F 10",
-          "patch": null,
-          "value": 100.0,
-          "freeze": true,
+          "patch": "nop",
           "enabled": true,
-          "note": "تثبيت الصحة (movss)"
+          "freeze": true,
+          "note": "بديل عام: movss [reg+disp32]"
         }
       }
     },
