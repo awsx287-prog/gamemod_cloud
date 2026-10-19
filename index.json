@@ -12,11 +12,11 @@
       "offsets_url": null,
       "cheats": {
         "health_sub": {
-          "type": "int32",
+          "type": "float",
           "aob_pattern": "F3 0F 11 4F ?? F3 0F 10",
           "patch": "nop",
           "enabled": true,
-          "freeze": false,
+          "Freeze": true,
           "note": "تعطيل نقصان الصحة (Unreal subss)"
         },
         "health_sub_1": {
