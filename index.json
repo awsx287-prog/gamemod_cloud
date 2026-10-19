@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "updated": "2026-10-19",
+  "games": {
+    "silent_hill_townfall": {
+      "description": "SILENT HILL: Townfall",
+      "process": "Townfall-Win64-Shipping.exe",
+      "platform": "Steam",
+      "appid": "1636440",
+      "engine": "unreal",
+      "cover": "covers/steam_1636440.jpg",
+      "offsets_url": null,
+      "cheats": {
+        "health_sub": {
+          "type": "int32",
+          "aob_pattern": "F3 0F 5C ?? ?? ?? ?? ?? 0F 2F",
+          "patch": "nop",
+          "enabled": true,
+          "freeze": false,
+          "note": "تعطيل نقصان الصحة (Unreal subss)"
+        },
+        "health_sub_1": {
+          "type": "int32",
+          "aob_pattern": "F3 0F 5C ?? ?? ?? ?? ?? 0F 2F",
+          "patch": "nop",
+          "enabled": true,
+          "freeze": false,
+          "note": "بديل 1 لنقصان الصحة"
+        },
+        "health_sub_2": {
+          "type": "int32",
+          "aob_pattern": "F3 0F 5C ?? ?? ?? ?? ?? 0F 2F",
+          "patch": "nop",
+          "enabled": true,
+          "freeze": false,
+          "note": "تعطيل نقصان الصحة 2"
+        },
+        "health_store": {
+          "type": "float",
+          "aob_pattern": "F3 0F 11 ?? ?? ?? ?? ?? F3 0F 10",
+          "patch": null,
+          "value": 100.0,
+          "freeze": true,
+          "enabled": true,
+          "note": "تثبيت الصحة (movss)"
+        }
+      }
+    },
+    "assaultcube": {
+      "description": "AssaultCube 1.3",
+      "process": "ac_client.exe",
+      "platform": "Steam",
+      "appid": "310890",
+      "engine": "generic",
+      "cover": "covers/steam_310890.jpg",
+      "cheats": {
+        "health": {
+          "type": "int32",
+          "module": "ac_client.exe",
+          "offsets": ["0x0050F4F4"],
+          "value": 999,
+          "freeze": true,
+          "enabled": true,
+          "note": "عنوان ثابت ac_client.exe+0x50F4F4"
+        },
+        "armor": {
+          "type": "int32",
+          "module": "ac_client.exe",
+          "offsets": ["0x0050F4F8"],
+          "value": 999,
+          "freeze": true,
+          "enabled": true,
+          "note": "الدرع"
+        },
+        "ammo": {
+          "type": "int32",
+          "module": "ac_client.exe",
+          "offsets": ["0x00509B74"],
+          "value": 9999,
+          "freeze": true,
+          "enabled": true,
+          "note": "الذخيرة"
+        }
+      }
+    },
+    "grand_theft_auto_v": {
+      "description": "Grand Theft Auto V",
+      "process": "GTA5.exe",
+      "platform": "Epic Games",
+      "appid": "271590",
+      "engine": "generic",
+      "cover": "covers/steam_271590.jpg",
+      "cheats": {
+        "health": {
+          "type": "float",
+          "enabled": false,
+          "freeze": false,
+          "value": 329.0,
+          "note": "GTA V بعناوين ديناميكية — أضف سلسلة pointer بعد تحديدها"
+        }
+      }
+    }
+  }
+}
