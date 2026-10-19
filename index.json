@@ -13,7 +13,7 @@
       "cheats": {
         "health_sub": {
           "type": "int32",
-          "aob_pattern": "F3 0F 5C ?? ?? ?? ?? ?? 0F 2F",
+          "aob_pattern": "F3 0F 11 4F ?? F3 0F 10",
           "patch": "nop",
           "enabled": true,
           "freeze": false,
